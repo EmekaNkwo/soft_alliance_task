@@ -1,0 +1,37 @@
+@import "../../shared/constants/colors/variable";
+.elements {
+  .elements_table {
+    width: 100%;
+    .element_table_head {
+      background-color: $primary-color;
+      color: $white_color;
+      .element_table_row {
+        text-align: left;
+        .element_table_head_cell {
+          padding: 0.6rem;
+          font-weight: 500;
+          font-size: 14px;
+          cursor: pointer;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+    .element_table_body {
+      text-align: left;
+
+      .element_table_body_row {
+        .element_table_body_row_cell {
+          border-bottom: 1px solid #ddd;
+          padding: 0.5rem;
+          color: $primary-color;
+          font-size: 13px;
+        }
+      }
+    }
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

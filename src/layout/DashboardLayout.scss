@@ -1,0 +1,33 @@
+@import "../shared/constants/colors/variable";
+.db_layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  .db_container {
+    display: flex;
+    .db_layout_left {
+      width: 310px;
+    }
+    .db_layout_right {
+      display: flex;
+      flex: 3;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .db_right_content {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        .db_right_main_content {
+          margin: 1.2rem;
+          border-radius: 4px;
+          padding: 1rem;
+          background: $white_color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../shared/constants/colors/variable";
+
+.navlink_container {
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+
+  flex-direction: column;
+  transition: max-height 0.3s ease-in-out;
+
+  .nav_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    .nav_items {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 16px;
+    }
+  }
+
+  .nav_sub_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 0.2rem;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    margin: 0.2rem;
+  }
+  &.expanded .nav_sub_menu {
+    opacity: 1;
+  }
+}

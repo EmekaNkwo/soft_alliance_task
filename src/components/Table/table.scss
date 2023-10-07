@@ -1,0 +1,66 @@
+@import "../../shared/constants/colors/variable";
+.table {
+  .main_table {
+    width: 100%;
+    .main_table_head {
+      background-color: $primary-color;
+      color: $white_color;
+
+      .main_table_row {
+        text-align: left;
+        .main_table_head_cell {
+          padding: 0.6rem;
+          font-weight: 500;
+          font-size: 14px;
+          cursor: pointer;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+    .main_table_body {
+      text-align: left;
+
+      .main_table_body_row {
+        .main_table_body_row_cell {
+          border-bottom: 1px solid #ddd;
+          padding: 0.5rem;
+          color: $primary-color;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .pagination {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary-color;
+    .page_size_dropdown {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 14px;
+
+      select {
+        padding: 0.3rem;
+        border: none;
+      }
+    }
+    .pagination_button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      button {
+        padding: 0.5rem;
+        border: none;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../shared/constants/colors/variable";
+.element {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .element_title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #2d416f;
+  }
+
+  .element_controls {
+    padding: 1rem;
+    background-color: #f4f6f8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .controls_left {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      .controls_icon {
+        color: #2d416f;
+        font-size: 44px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+
+    .control_right_button {
+      background-color: $secondary-color;
+      color: $white_color;
+    }
+  }
+}

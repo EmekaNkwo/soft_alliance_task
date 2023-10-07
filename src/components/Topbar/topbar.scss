@@ -1,0 +1,85 @@
+@import "../../shared/constants/colors/variable";
+
+.topbar {
+  height: 80px;
+  width: 100%;
+  background-color: $white_color;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .topbar_left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .topbar_company_select {
+      padding: 0.5rem;
+      background-color: #f6f7f9;
+      border-radius: 4px;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      gap: 1rem;
+      .topbar_home_icon {
+        color: #2d416f;
+        font-size: 24px;
+      }
+      .topbar_left_content {
+        display: flex;
+        flex-direction: column;
+        p {
+          font-size: 12px;
+        }
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          color: #2d416f;
+        }
+      }
+    }
+  }
+
+  .topbar_right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .topbar_right_notification {
+      position: relative;
+      .topbar_right_icon {
+        font-size: 24px;
+      }
+      .topbar_right_red_dot {
+        position: absolute;
+        top: -3px;
+        right: 2px;
+        padding: 5px;
+        border-radius: 50%;
+        width: 8px;
+        background-color: red;
+      }
+    }
+    .topbar_right_profile {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      img {
+        // border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+
+      .topbar_right_content {
+        display: flex;
+        flex-direction: column;
+        p {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
