@@ -35,3 +35,15 @@
     }
   }
 }
+
+.create_element {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+  justify-content: center;
+  .create_element_steps {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

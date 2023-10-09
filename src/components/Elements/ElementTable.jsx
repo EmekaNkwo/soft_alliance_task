@@ -1,128 +1,66 @@
 /* eslint-disable react-refresh/only-export-components */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CustomTable from "../Table/CustomTable";
+import { useGetElementsQuery } from "../../redux/api/elementApi";
 
 const columns = [
-  {
-    header: "ID",
-    accessorKey: "id",
-  },
   {
     header: "Name",
     accessorKey: "name",
   },
   {
-    header: "Genre",
-    accessorKey: "genre",
+    header: "Element Category",
+    accessorKey: "categoryValueId",
   },
   {
-    header: "Rating",
-    accessorKey: "rating",
+    header: "Element Classification",
+    accessorKey: "classificationId",
+  },
+  {
+    header: "Status",
+    accessorKey: "status",
+  },
+  {
+    header: "Date & Time Modified",
+    accessorKey: "",
+    cell: (row) => {
+      return <div>{new Date(row.row.original.createdAt).toLocaleString()}</div>;
+    },
+  },
+  {
+    header: " Modified By",
+    accessorKey: "modifiedBy",
   },
 ];
 
-const data = [
-  {
-    id: 1,
-    name: "Harry Potter",
-    genre: "Fantasy",
-    rating: 4,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Lord of the Rings",
-    genre: "Fantasy",
-    rating: 5,
-  },
-];
 const ElementTable = () => {
+  const { data, isSuccess, isError, isLoading, error } = useGetElementsQuery();
+  const [tableData, setTableData] = useState([]);
+
+  useEffect(() => {
+    if (isSuccess) {
+      setTableData(data?.data?.content);
+    }
+    if (isError) {
+      console.log(error);
+    }
+  }, [data, error, isError, isSuccess]);
+
   return (
     <div>
-      <CustomTable dataSet={data} columns={columns} />
+      {isLoading ? (
+        "Loading..."
+      ) : (
+        <>
+          {tableData === undefined || tableData.length === 0 ? (
+            "No results"
+          ) : (
+            <>
+              <CustomTable dataSet={tableData} columns={columns} />
+            </>
+          )}
+        </>
+      )}
     </div>
   );
 };

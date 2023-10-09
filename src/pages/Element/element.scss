@@ -35,3 +35,57 @@
     }
   }
 }
+
+.element_link {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .element_link_back {
+    font-size: 1.5rem;
+    color: $secondary-color;
+    cursor: pointer;
+    width: 20px;
+  }
+  .element_link_title {
+    font-size: 1.2rem;
+    color: $primary-color;
+    font-weight: 600;
+  }
+  .element_detail_container {
+    width: 100%;
+    .element_detail_row {
+      display: flex;
+      align-items: center;
+      .element_detail_cell {
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        height: 65px;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex: 1;
+        color: $primary-color;
+        .element_detail_label {
+          font-size: 11px;
+          text-transform: uppercase;
+          color: $subtitle-color;
+          font-weight: 500;
+        }
+        .element_detail_value {
+          font-size: 16px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .element_link_table {
+    width: 100%;
+    margin-top: 2rem;
+    .element_link_title {
+      font-size: 1.2rem;
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+}

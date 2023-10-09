@@ -10,3 +10,16 @@
   border: none;
   cursor: pointer;
 }
+
+.outlined_button {
+  padding: 0.4rem;
+  height: 38px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}

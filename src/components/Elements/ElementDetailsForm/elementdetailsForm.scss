@@ -1,0 +1,27 @@
+.element_details_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .element_details_form_field {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .element_details_form_actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    .outlined_btn {
+      width: 50%;
+      border: 2px solid #4baa79;
+      color: #4baa79;
+    }
+    .filled_btn {
+      width: 50%;
+      background-color: #4baa79;
+      color: white;
+    }
+  }
+}

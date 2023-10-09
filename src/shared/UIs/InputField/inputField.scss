@@ -46,3 +46,134 @@
     }
   }
 }
+
+.errorMesg {
+  color: red;
+}
+
+.textField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  input {
+    outline: none;
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+  }
+  input::placeholder {
+    font-size: 12px;
+  }
+}
+
+.selectField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  select {
+    outline: none;
+    height: 38px;
+    padding: 10px;
+    border-radius: 8px;
+
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+  }
+}
+.multiselectField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  select {
+    outline: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+  }
+}
+
+.textAreaField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  textarea {
+    outline: none;
+    resize: none;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+  }
+  textarea::placeholder {
+    font-size: 12px;
+  }
+}
+
+.dateField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  input {
+    outline: none;
+    height: 34px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dfdfdf;
+  }
+}
+
+.radioButtonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  input[type="radio"] {
+    accent-color: $secondary-color;
+  }
+  .radioButtonOptions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #dfdfdf;
+    .radioButtonOption {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+}
+
+.switchField {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  .switch {
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.checkBoxField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  .checkBox {
+    input[type="checkbox"] {
+      accent-color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+}

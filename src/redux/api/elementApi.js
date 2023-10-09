@@ -1,9 +1,12 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
-import { baseQueryWithInterceptor } from "../queryInterceptor";
+import { baseUrl } from "../apiService";
+import { fetchBaseQuery } from "@reduxjs/toolkit/dist/query";
 
 export const elementApi = createApi({
   reducerPath: "elements",
-  baseQuery: baseQueryWithInterceptor,
+  baseQuery: fetchBaseQuery({
+    baseUrl: `${baseUrl}`,
+  }),
 
   refetchOnReconnect: true,
   tagTypes: ["ElementData", "ElementDetails"],
@@ -39,6 +42,10 @@ export const elementApi = createApi({
       }),
       invalidatesTags: ["ElementData"],
     }),
+    getElementLinks: builder.query({
+      query: (id) => `elements/${id}/elementlinks`,
+      providesTags: ["Elementlinks"],
+    }),
   }),
 });
 
@@ -48,4 +55,5 @@ export const {
   useCreateElementMutation,
   useUpdateElementMutation,
   useDeleteElementMutation,
+  useGetElementLinksQuery,
 } = elementApi;

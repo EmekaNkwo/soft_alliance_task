@@ -1,4 +1,22 @@
 @import "../../shared/constants/colors/variable";
+
+.table_actions {
+  .table_actions_more {
+    cursor: pointer;
+  }
+}
+
+.table_actions_view {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.table_actions_delete {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: red;
+}
 .table {
   .main_table {
     width: 100%;
@@ -23,6 +41,7 @@
       .main_table_body_row {
         .main_table_body_row_cell {
           border-bottom: 1px solid #ddd;
+
           padding: 0.5rem;
           color: $primary-color;
           font-size: 13px;

@@ -18,6 +18,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               colorItemTextSelected: "#4baa79",
               fontSizeIcon: 30,
             },
+            Steps: {
+              colorPrimary: "#4baa79",
+              fontSize: 14,
+            },
+            Select: {
+              colorPrimaryActive: "#dfdfdf",
+              colorPrimaryHover: "#dfdfdf",
+            },
+            Switch: {
+              colorPrimary: "#4baa79",
+            },
           },
         }}
       >

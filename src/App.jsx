@@ -15,7 +15,7 @@ export const router = createBrowserRouter(
 
       <Route path="dashboard/element" element={<DashboardLayout />}>
         <Route index element={<Element />} />
-        <Route path="element/:id" element={<ElementLink />} />
+        <Route path=":id" element={<ElementLink />} />
       </Route>
     </>
   )

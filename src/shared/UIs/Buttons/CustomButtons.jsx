@@ -1,17 +1,29 @@
 import PropTypes from "prop-types";
 import "./customButtons.scss";
-export const FilledButton = ({ props, title, className, icon }) => {
+export const FilledButton = ({ onClick, title, className, icon }) => {
   return (
-    <div>
-      <button className={`filled_button ${className}`} {...props}>
-        {title} {icon}
-      </button>
-    </div>
+    <button className={`filled_button ${className}`} onClick={onClick}>
+      {title} {icon}
+    </button>
+  );
+};
+
+export const OutlinedButton = ({ onClick, title, className, icon }) => {
+  return (
+    <button className={`outlined_button ${className}`} onClick={onClick}>
+      {title} {icon}
+    </button>
   );
 };
 
 FilledButton.propTypes = {
-  props: PropTypes.any,
+  onClick: PropTypes.func,
+  title: PropTypes.string,
+  className: PropTypes.string,
+  icon: PropTypes.any,
+};
+OutlinedButton.propTypes = {
+  onClick: PropTypes.func,
   title: PropTypes.string,
   className: PropTypes.string,
   icon: PropTypes.any,

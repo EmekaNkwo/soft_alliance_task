@@ -1,0 +1,8 @@
+.element_link_layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  .element_link_layout_controls {
+    display: flex;
+  }
+}
